@@ -1,0 +1,15 @@
+{
+    "name": "forsite",
+    "version": "1.0.0",
+    "description": "Trying to release some site",
+    "main": "src/index.jsx",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "github.com/HappyHidra/site"
+    },
+    "author": "MihaLIke",
+    "license": "ISC"
+}
