@@ -4,12 +4,46 @@
     "description": "Trying to release some site",
     "main": "src/index.jsx",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack-dev-server --mode development --open --hot --progress --colors --config ./webpack.config.js",
+        "build": "webpack --mode production"
+    },
+    "author": "MihaLIke",
+    "license": "ISC",
+    "dependencies": {
+        "connected-react-router": "*",
+        "enzyme": "*",
+        "enzyme-adapter-react-16": "*",
+        "history": "^5.0.0",
+        "js-polyfills": "*",
+        "lodash": "*",
+        "react": "*",
+        "react-dom": "*",
+        "react-redux": "*",
+        "react-router-redux": "*",
+        "redux": "*",
+        "redux-action": "*",
+        "redux-actions": "*",
+        "redux-logger": "*",
+        "redux-thunk": "*",
+        "reselect": "*"
+    },
+    "devDependencies": {
+        "@babel/core": "*",
+        "@babel/plugin-transform-runtime": "*",
+        "@babel/preset-env": "*",
+        "@babel/preset-react": "*",
+        "@babel/runtime": "*",
+        "babel-loader": "*",
+        "babel-plugin-transform-class-properties": "*",
+        "html-webpack-plugin": "^4.3.0",
+        "react-router-dom": "*",
+        "webpack": "*",
+        "webpack-cli": "*",
+        "webpack-dev-server": "*"
     },
     "repository": {
         "type": "git",
         "url": "github.com/HappyHidra/site"
-    },
-    "author": "MihaLIke",
-    "license": "ISC"
+    }
 }
