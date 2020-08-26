@@ -10,10 +10,21 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(js|jsx)$/, //проверить все файлы .js в проекте
-            exclude: /node_modules/, // исключение, конвертация файлов в этой папке не требуется
-            use: 'babel-loader' //для конвертации JS-файла, написанного на ES6, в совместимый с браузером ES5
-        }, ]
+                test: /\.(js|jsx)$/, //проверить все файлы .js в проекте
+                exclude: /node_modules/, // исключение, конвертация файлов в этой папке не требуется
+                use: 'babel-loader' //для конвертации JS-файла, написанного на ES6, в совместимый с браузером ES5
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader',
+                }, ],
+            },
+        ]
     },
     resolve: {
         extensions: [

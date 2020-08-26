@@ -1,0 +1,26 @@
+body,
+html {
+    /*сбросить отступы макета сайта от внутренних и внешних границ экрана (для соблюдения кроссбраузерности) */
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+#container {
+    width: 100%;
+    min-width: 800px;
+    min-height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(/src/images/background-main.jpg);
+    background-size: cover;
+}
+
+.btn {
+    background-color: blanchedalmond;
+    color: purple;
+}
+
+.btn:hover {
+    color: red;
+}
