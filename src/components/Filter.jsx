@@ -29,17 +29,17 @@ class Filter extends React.Component {
     if (btn === 'active') {
       return (
         <>
-          <button type="button" className="btn btn-link border-0 p-0" data-test="task-filter-all" onClick={this.handleBtnClick('all')}>All Tasks</button>
+          <button type="button" className="btn border-0 p-0" data-test="task-filter-all" onClick={this.handleBtnClick('all')}>Все задачи</button>
           {filters.filter((e) => e[0] === btn).map((e) => e[1])}
-          <button type="button" className="btn btn-link border-0 p-0" data-test="task-filter-finished" onClick={this.handleBtnClick('finished')}>Finished Tasks</button>
+          <button type="button" className="btn border-0 p-0" data-test="task-filter-finished" onClick={this.handleBtnClick('finished')}>Завершенные задачи</button>
         </>
       );
     }
     if (btn === 'finished') {
       return (
         <>
-          <button type="button" className="btn btn-link border-0 p-0" data-test="task-filter-all" onClick={this.handleBtnClick('all')}>All Tasks</button>
-          <button type="button" className="btn btn-link border-0 p-0" data-test="task-filter-active" onClick={this.handleBtnClick('active')}>Active Tasks</button>
+          <button type="button" className="btn border-0 p-0" data-test="task-filter-all" onClick={this.handleBtnClick('all')}>Все задачи</button>
+          <button type="button" className="btn border-0 p-0" data-test="task-filter-active" onClick={this.handleBtnClick('active')}>Активные задачи</button>
           {filters.filter((e) => e[0] === btn).map((e) => e[1])}
         </>
       );
@@ -47,8 +47,8 @@ class Filter extends React.Component {
     return (
       <>
         {filters.filter((e) => e[0] === btn).map((e) => e[1])}
-        <button type="button" className="btn btn-link border-0 p-0" data-test="task-filter-active" onClick={this.handleBtnClick('active')}>Active Tasks</button>
-        <button type="button" className="btn btn-link border-0 p-0" data-test="task-filter-finished" onClick={this.handleBtnClick('finished')}>Finished Tasks</button>
+        <button type="button" className="btn border-0 p-0" data-test="task-filter-active" onClick={this.handleBtnClick('active')}>Активные задачи</button>
+        <button type="button" className="btn border-0 p-0" data-test="task-filter-finished" onClick={this.handleBtnClick('finished')}>Завершенные задачи</button>
       </>
     );
   }
