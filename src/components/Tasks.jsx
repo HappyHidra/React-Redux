@@ -32,21 +32,32 @@ class Tasks extends React.Component {
 
   renderTasks() {
     const { tasks } = this.props;
-    console.log(tasks)
     return (
       <div className="mt-3">
         <ul className="list-group">
           {tasks.map(({ id, text, state }) => (
-            <li key={id} className="list-group-item d-flex">
-              <span className="mr-auto">
-                <button type="button" data-test="task-toggle-state" className="btn btn-link" onClick={this.handleToggleTaskState(id)}>
-                  {state === 'active' ? text : <s>{text}</s>}
+            <>
+              {state === 'active' ? <li key={id} className="list-group-item list-group-item-primary d-flex mx-auto mt-2">
+                <span className="mr-auto">
+                  <button type="button" data-test="task-toggle-state" className="btn" onClick={this.handleToggleTaskState(id)}>
+                  {`Номер задачи: ${id}. Наименование: ${text}`}
+                  </button>
+                </span>
+                <button type="button" data-test="task-remove" className="close" onClick={this.handleRemoveTask(id)}>
+                  <span>&times;</span>
                 </button>
-              </span>
-              <button type="button" data-test="task-remove" className="close" onClick={this.handleRemoveTask(id)}>
-                <span>&times;</span>
-              </button>
-            </li>
+              </li> :
+                <li key={id} className="list-group-item list-group-item-success d-flex mx-auto mt-2">
+                  <span className="mr-auto">
+                    <button type="button" data-test="task-toggle-state" className="btn" onClick={this.handleToggleTaskState(id)}>
+                    {`Номер задачи: ${id}. Наименование: ${text}`}
+                    </button>
+                  </span>
+                  <button type="button" data-test="task-remove" className="close" onClick={this.handleRemoveTask(id)}>
+                    <span>&times;</span>
+                  </button>
+                </li>}
+            </>
           ))}
         </ul>
       </div>

@@ -34,8 +34,8 @@ class NewTaskForm extends React.Component {
     const { text } = this.props;
 
     return (
-      <form action="" className="form-inline" onSubmit={this.handleAddTask}>
-        <div className="form-group mx-sm-3">
+      <form action="" className="form-inline mx-auto" onSubmit={this.handleAddTask}>
+        <div className="form-group mx-auto">
           <input
             type="text"
             required
@@ -43,7 +43,7 @@ class NewTaskForm extends React.Component {
             onChange={this.handleUpdateNewTaskText}
           />
         </div>
-        <input type="submit" className="btn btn-primary btn-sm" value="Add" />
+        <input type="submit" className="btn btn-primary btn-sm mx-auto" value="Добавить задачу" />
       </form>
     );
   }
