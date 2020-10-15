@@ -10,5 +10,7 @@ Redux - Predictable state container for JavaScript apps.
 ### CSS Frameworks:
 Bootstrap - HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
 
-### Module bundlers
-webpack - Module Bundler.
+### Module bundlers:
+Webpack - Module Bundler.
+
+![](http://g.recordit.co/PDeYDYNNwt.gif)
